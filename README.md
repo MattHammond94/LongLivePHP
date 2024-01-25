@@ -25,3 +25,9 @@
 * For developing locally can use XAMPP (X(cross platform), Apache, mySQL, PHP and Pearl(Another programming language)) - XAMPP needs to be installed for appropriate OS.
 
 ### Running PHP/Setup:
+
+After installing XAMPP use the desktop application to run your local server. Files are served to localhost from the htdocs file in the XAMPP application folder.
+
+You can add files and folders from here to be viewed in the browser: adding a dir "home" with an index file "home.php" will allow you to go to localhost/home where the home.php file will be rendered.
+
+adding further files to home dir can be accessed at /home/<FileName>
