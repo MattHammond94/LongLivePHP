@@ -23,6 +23,16 @@
     } else {
       $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
+
+    if(empty($nameErr) && empty($emailErr) && empty($bodyErr)) {
+      $sql = "INSERT INTO feedback (name, email, body) VALUES('$name', '$email', '$body')";
+
+      if(mysqli_query($conn, $sql)) {
+        header('Location: feedback.php');
+      } else {
+        echo 'Error: ' . mysqli_error($conn);
+      }
+    }
   }
 ?>
 
